@@ -18,6 +18,12 @@ namespace Projeto.Controllers
             _context = context;
         }
 
+        //MATRICULAR
+        public async Task<IActionResult> ListaDeCursos()
+        {
+            return View(await _context.Cursos.ToListAsync());
+        }
+
         // GET: Cursos
         public async Task<IActionResult> Index()
         {

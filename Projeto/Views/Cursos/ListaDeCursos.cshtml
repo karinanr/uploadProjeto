@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Projeto.Models.Curso>
+@{
+    ViewData["Title"] = "ListaDeVagas";
+}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @{
+            foreach (var item in Model)
+            {
+                <div class="col m-5">
+                    <div class="card">
+                        <img src="IMAGEM AQUI" class="card-img-top" alt="..." width="300px">
+                        <div class="card-body ">
+                            <h5 class="card-title">NOME DO CURSO AQUI</h5>
+                            <p class="card-text">DESCRICAO AQUI</p>
+                            <a asp-controller="Matriculas" asp-action="Matricular" class="btn btn-primary">Candidatar-se</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

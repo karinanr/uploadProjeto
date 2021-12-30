@@ -18,6 +18,11 @@ namespace Projeto.Controllers
             _logger = logger;
         }
 
+        public IActionResult CRUD()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();

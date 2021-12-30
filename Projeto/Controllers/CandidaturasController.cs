@@ -16,6 +16,16 @@ namespace Projeto.Controllers
             _context = context;
         }
 
+        //Candidatar
+        public async Task<IActionResult> Candidatar()
+        {
+            ViewData["IdCurso"] = new SelectList(_context.Cursos, "Id", "Nome");
+            ViewData["IdEmpresa"] = new SelectList(_context.Empresas, "Id", "Nome");
+            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "Nome");
+            ViewData["IdVaga"] = new SelectList(_context.Vagas, "Id", "Cargo");
+            return View();
+        }
+
         // GET: Candidaturas
         public async Task<IActionResult> Index()
         {

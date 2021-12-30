@@ -17,6 +17,11 @@ namespace Projeto.Controllers
         {
             _context = context;
         }
+        //ListaDEVagas
+        public async Task<IActionResult> ListaDeVagas()
+        {
+            return View(await _context.Vagas.ToListAsync());
+        }
 
         // GET: Vagas
         public async Task<IActionResult> Index()
