@@ -18,13 +18,6 @@ namespace Projeto.Controllers
             _context = context;
         }
 
-        //MATRICULAR
-        public IActionResult Matricular()
-        {
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "Nome");
-            return View();
-        }
-
         // GET: Matriculas
         public async Task<IActionResult> Index()
         {
